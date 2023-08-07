@@ -1,0 +1,49 @@
+#concatenate the words in a list
+l=['Aaaa','Bfff',"Csss"]
+s=''
+for i in l:
+    s=s+' '+i 
+print(s)
+#remove all vowels and return the modified string
+vowels='aeiouAEIOU'
+s='nani'
+m=''
+for i in s:
+    if i not in vowels:
+        m+=i
+print(m)
+
+#longest word in sentence
+#sentence as input and return the sentence in reverse order
+#list of names that starts with vowel count the no of names
+#remove duplicate chracters from given string
+#take sentence,word as input check if word is in sentence 
+
+sentence='hello how are you'
+s=sentence.split()[0]
+for i in sentence.split():
+    if len(i) > len(s):
+        i=s
+print(s)
+
+sentence='hello how are you'
+s=sentence.split()
+s=s[::-1]
+s=''.join(s)
+print(s)
+
+l=['Aqq','Eww','Iee','Lrr','Hyy']
+v='AEIOU'
+count=0
+for i in l:
+    for j in v:
+        if i.startswith(j):
+            count=count+1
+print(count)
+
+sentence='hello how are you'
+s=''
+for i in sentence.split():
+    for j in i:
+        if j not in s:
+            print(j)

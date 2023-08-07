@@ -1,0 +1,248 @@
+print("hello world")
+
+num1=int(input("enter num1:"))
+num2=int(input("enetr num2:"))
+sum=num1+num2
+print(sum)
+
+#fareheit=18*celsius
+c=20
+f=18*c
+print(f)
+
+#area_of_rectangle=length*width
+
+name=(input("enter name:"))
+age=int(input("enetr age:"))
+user_data=f'my name is , {name} and age is , {age}'
+print(user_data)
+
+num=20
+if num%2 == 0:
+    print("even")
+else:
+    print("odd")
+
+l1=[10,2,3,4,5]
+maxi=l1[0]
+mini=l1[0]
+for i in l1:
+    if i > maxi:
+        maxi=i
+    elif i < mini:
+        mini=i
+print(maxi)
+print(mini)
+
+#palindrome
+s='Nitin'
+s=s[::-1]
+print(s)
+#compound interest
+#A=p*(1+r/n)**n*t
+#compound interest=A-p
+
+#convert given no of days into years,weeks,days
+days=230
+years=days//365#integer
+remaining_days=days%365
+weeks=remaining_days//7
+remaining_days=remaining_days%7
+print(remaining_days)
+print(years,remaining_days,weeks)
+
+#sum of oall positive numbers
+l1=[-1,-2,3,4,5,6]
+sum=0
+for i in l1:
+    if i > 0:
+        sum=sum+i
+print(sum)
+
+word="Anusha"
+count=0
+for i in word:
+    count=count+1
+
+
+#swaps 2 values
+a=10
+b=11
+temp=a #temp=10
+a=b #a=11
+b=temp #b=10
+print(a)
+print(b)
+
+#revers a string
+s="Anusha"
+s=s[::-1]
+print(s)
+s=''.join(s)
+print(s)
+
+def reverse_string(str):
+    str=str[::-1]
+    return str
+r=reverse_string('Anusha')
+print(r)
+
+#panagram
+
+s='Nani'
+a='abcdef'
+if s in a:
+    print('p')
+else:
+    print("not p")
+
+#convert no of minutes into hours and minutes
+minutes=64
+hours=minutes//60
+print(hours)
+remaining_minutes=minutes%60
+print(remaining_minutes)
+
+def count_vowels(s):
+    count=0
+    vowels='aeiou'
+    for i in s:
+        if i in vowels:
+            count=count+1
+    return count
+s='nani'
+c=count_vowels(s)
+print(c)
+
+#prime number
+
+n=10
+flag=False
+if n<0:
+    print("no negative")
+if n ==0 or n==1:
+    print("not prime")
+elif n > 1:
+    for i in range(2,n):
+        if n % i ==0:
+            flag=True
+        break
+if flag:
+    print("not prime")
+else:
+    print("prime")
+#print first 10 even numbers
+
+for i in range(1,20):
+    if i % 2==0:
+        print(i)
+#in a loop print even numbers and store in new list       
+l1=[12,3,4,5,6,7]
+l2=[]
+for i in l1:
+    if i % 2==0:
+        l2.append(i)
+print(l2)
+
+#fibonacci series
+def fibonacci_series(n):
+    u=0
+    v=1
+    if n < 0:
+        print("no negative")
+    elif n == 0:
+        return 0
+    elif n==1:
+        return v
+    else:
+        for i in range(1,n):
+            w=u+v
+            u=v
+            v=w
+        return v
+print(fibonacci_series(10))
+            
+#list of names that starts with 'N'
+#multiplication table of given number
+#factorial
+#prime numbers between 1 to 100
+#given a list of words,count the number of words with more than five characters
+
+l1=['Nani','Nikki','Nari','siva','ravi']
+for i in l1:
+    if i.startswith('N'):
+        print(i)
+n=10
+for i in range(1,n+1):
+    print(n ,'x', i, '=', n*i)
+
+n=7
+#n*n-1*n-2*n-3*n-4
+f=1
+for i in range(1,n+1):
+    f=f*i
+print(f)
+   
+lower=1
+upper=100
+for num in  range(lower,upper+1):
+    if num > 1:
+        for i in range(2,num):
+            if (num % i) == 0:
+                break
+        else:
+            print(num)
+
+l1=['Nani','Nikki','Nari','siva','ravi']
+count=0
+for i in l1:
+    if len(i) == 5:
+        count=count+1
+        print(count)
+#a=3.14*r*r #area of circle
+def area(r):
+    return 3.14*r*r
+print(area(2))
+
+#prime number
+flag=False
+def prime(n):
+    if n < 0:
+        print("no negative")
+    elif n> 1:
+        for i in range(2,n):
+            if n % 2 ==0:
+                return False
+        return True
+                
+print(prime(10)) 
+
+#factorial using recursion
+#square of each element in a list
+#takes a list of strings and returns the list sorted alphabetically
+#take 2 list and returns their intersection
+def factorial(n):
+    if n == 0 :
+        return 1
+    if n > 0:
+        return n * factorial(n-1)
+print(factorial(8))
+l2=[]
+l1=[1,2,3,4,5,6]
+def square(l1):
+    for i in l1:
+        l2.append(i*i)
+    return l2
+print(square(l1)) 
+
+l3=['a','d','b','c']
+def sort_list(l3):
+    l4=sorted(l3)
+    return l4
+print(sort_list(l3))
+
+l0=[1,2,3,4,5]
+l=[2,3,8,9]
+for i in l0:
+    if i in l:
+        print(i)

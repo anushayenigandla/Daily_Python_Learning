@@ -1,0 +1,91 @@
+#list of numbers ,find sum and average
+l1=[1,2,3,4,5]
+s=0
+for i in l1:
+    s=s+i
+print(s)
+a=s/2
+print(a)
+
+#create a list of fruits and add a new fruit to the list
+f=['Apple','Mango','Sapota']
+f.append('Strawberry')
+print(f)
+
+#access element in a tuple using indexing
+f=('Apple','Mango','Sapota')
+d=f[0]
+print(d)
+
+#given 2 list of numbers and concatenate them into single list
+#implement a function that takes a list of numbers and return a new list with the squared values
+#create a program that finds the common elements between two list and stores them in a new list
+#given a list of words,find the word with maximun legth and get the length
+#count the occurences of each element in a given list
+#remove duplicate names and print the unique names
+#create a function that takes a list of strings and return the list sorted by the length of the strings
+#check if given list is sorted in ascending or not
+#take 2 lists and retuen their union
+
+l1=[1,2,3,4,5]
+l2=[6,7,8,9,0]
+l1=l1+l2
+print(l1)
+
+l1=[1,2,3,4,5]
+l2=[]
+for x in l1:
+    y=x**2
+    l2.append(y)
+print(l2)
+
+l3=['Aaaaa','Bbbbbb','Cccccccc','Ddddddddddd']
+max_length=0
+max_word=''
+for l in l3:
+    if len(l) > max_length:
+        max_length=len(l)
+        max_word=l
+print(max_length)
+
+print(max_word)
+
+l3=['Aaaaa','Bbbbbb','Cccccccc','Ddddddddddd','Aaaaa']
+l4=set(l3)
+print(l4)
+
+l3=[1,2,3,4,4,4]
+l4={}
+for i in l3:
+    if i in l4:
+        l4[i]+=1
+    else:
+        l4[i]=1
+        
+for i, count in l4.items():
+    print(f"{i}: {count} occurrences")
+    
+l3=['zzzz','Aaaaa','Bbbbbb','Cccccccc','Ddddddddddd']
+
+l4=[len(i) for i in l3]
+print(l4)
+d={k:v for (k,v) in zip(l3,l4)}
+print(sorted(d.items()))
+print(sorted(d.values()))
+
+l3=['zzzz','Aaaaa','Bbbbbb','Cccccccc','Ddddddddddd']
+l=sorted(l3)
+print(l)
+if l3 == l:
+    print("the given list is sorted")
+else:
+    print("not sorted")
+    
+l3=[1,2,3,4,4,4]
+l4=[3,4,5,6,1,2]
+l=set(l3)
+print(l)
+l2=set(l4)
+print(l2)
+l3=l.union(l2)
+print(l3)

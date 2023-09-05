@@ -32,3 +32,12 @@ def prime(n):
     t1=time.time()
     print(t1-t)
 prime(20)
+#given start and end then get the prime numbers
+def prime(start,end):
+    for i in range(start,end):
+        for j in range(2,i//2+1):
+            if i % j == 0:
+                break
+        else:
+            print(i)
+prime(20,40)

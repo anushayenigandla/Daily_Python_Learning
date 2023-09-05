@@ -1,0 +1,30 @@
+#list comprehension
+l=[1,2,3,4,5]
+l1=[i*i*i for i in l]
+print(l1)
+
+#sort a list without using buitin function
+l=[1,8,2,3,4,5]
+n=len(l)
+for i in range(n):
+    for j in range(i,n):
+        if l[i] > l[j]:
+            l[i],l[j] = l[j],l[i]
+print(l)
+
+#define a function that takes 2 numbers and 1 operator and evaluate the result
+def eval_result(n,m,operator):
+    result=eval(str(n)+operator+str(m))
+    return result
+print(eval_result(2,3,'*'))
+
+#copy content from hello.txt to hello2.txt that contains nitin keyword in a line
+l=[]
+with open("hello.txt",r) as f:
+    l=f.readlines()
+    f.close()
+with open("hello2.txt",w) as f:
+    for i in l:
+        if i.contains("nitin"):
+            f.write(i)
+    

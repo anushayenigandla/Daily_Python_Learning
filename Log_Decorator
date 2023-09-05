@@ -1,0 +1,28 @@
+def log_datetime_decorator(func):
+	def wrapper_func():
+		print(f"function:{func.__name__}")
+		print(f"run on (datetime.today().strftime("%Y-%m-%d %h:%m:%s"))")
+		print("------------")
+		func()
+	return wrapper_func
+
+@log_datetime_decorator
+
+def daily_cron_job():
+	time.sleep(9)
+	print("daily cron job has finished")
+
+@log_datetime_decorator
+def weekly_cron_job():
+	time.sleep(61.5)
+	print("weekly cron job has finished")
+
+@log_datetime_decorator
+def monthly_cron_job():
+	time.sleep(2.1)
+	print("monthly cron job has finished")
+
+daily_cron_job()
+weekly_cron_job()
+monthly_cron_job()
+daily_cron_job()

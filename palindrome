@@ -1,0 +1,28 @@
+#check whether string is palindrome or not
+s='nitin'
+if s == s[::-1]:
+    print("palindrome")
+else:
+    print("not palindrome")
+
+#reverse a string    
+y="the sun is yellow"
+y=y.split(" ")
+y = y[::-1]
+y=' '.join(y)
+print(y)
+
+
+n=len(s)
+x=0
+for i in range(n//2):
+    print(i)
+    if s[i] != s[n-i-1]:
+        x=1
+        break
+if x == 0:
+    print("palindrome")
+else:
+    print("not palindrome")
+s="nitin"
+        

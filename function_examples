@@ -1,0 +1,12 @@
+#find the largest string without repeating the character is not repeated
+s1='abcfggdghiqwerty'
+temp_s1=''
+l=[]
+for i in range(len(s1)):
+    if s1[i] in temp_s1:
+        l.append(temp_s1)
+        temp_s1=s1[i]
+    else:
+        temp_s1+=s1[i]
+l.append(temp_s1)
+print(max(l))

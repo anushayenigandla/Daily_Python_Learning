@@ -1,0 +1,36 @@
+#fibonnaci series
+def fibonacci(n):
+    if n <=1:
+        return n
+    else:
+        return(fibonacci(n-1) + fibonacci(n-2))
+nterms=10
+if nterms <= 0:
+    print("invalid")
+else:
+    for i in range(nterms):
+        print(fibonacci(i))
+
+
+#print required output 
+string='abcdef'
+l=[1,1,2,3,5,8]
+sum1=0
+for i in l:
+    sum1+=i
+print(sum1)
+
+s=str(sum1)
+
+n=len(string)
+for i in range(n):
+    s=s+str(string[i])+str(l[i])
+print(s)
+#output=20a1b1b2d3e4f8
+
+#sort the list without using builtin functions
+l=[1,10,2,3,5,8]
+n=len(l)
+for i in range(int(n/2)):
+    l[i],l[n-i-1] = l[n-i-1],l[i]
+print(l)

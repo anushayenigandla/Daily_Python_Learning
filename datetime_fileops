@@ -1,0 +1,19 @@
+def file_info():
+  totalbytes = 0
+  folder="deps"
+  dirlist=os.listdir(folder)
+  for entry in dirlist:
+    if os.path.isfile(folder + "/" + entry) and entry.endswith(".txt")
+      filesize=os.path.getsize(folder + "/" + entry)
+      totalbytes +=filesize
+  return totalbytes
+
+
+import calendar
+def count_days(theyear,themonth,whichday):
+  daycount=0
+  weekslist=calendar.monthcalender(theyear,themonth)
+  for week in weeklist:
+    if week[whichday] != 0:
+      daycount +=1
+  return daycount
